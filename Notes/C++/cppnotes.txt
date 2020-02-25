@@ -1,0 +1,117 @@
+C++ NOTES
+-----------------------------------------------------
+Important Codes:
+
+- #include <iostream> iostream is a part of c++ standard library, deals with basic input and output, io means input/output
+
+
+- using namespace std;
+
+- int main()
+
+- cout for character out, cin for character in
+
+------------------------------------------------------
+Types of Initialization:
+
+- Copy Intialization 
+Basic way to initialize variable, for simple data types like integers
+
+	int width = 5;
+
+
+- Direct Initialization
+Similar to copy init, but can perform better for advanced data types
+Recommended because in most cases, it has a better performance boost
+	
+	int width(5);
+
+
+- Brace Initialization
+Can be used for initializing types that can't be used with copy and direct
+Such as intializing an object with a list of data
+
+	int width{5}; direct brace initializing of value 5 into variable width
+	
+	int height = {6}; copy brace initializing of value 5 into variable height
+	
+Initializing a variable with empty braces indicates zero initialization
+Use zero initializing if value is temporary and will be replaced
+
+	int width{};
+
+--------------------------------------------------------
+endl vs \n for ending line:
+
+using endl can be a bit inefficient, does 2 jobs, moves cursor to next line and flushes the output
+
+using \n moves curser to next line but doesnt flush
+
+examples of using \n
+
+cout << "x is equal to: " << x << '\n'; using \n standalone
+
+cout << "and that is all folks!\n"; using \n embedded into a double quoted piece of text
+
+
+---------------------------------------------------------
+>> vs << for cin and cout:
+
+cout uses <<, cin uses >>
+
+cout << "bla bla"; direction represents the data "bla bla" to the character output
+cin >> x; direction represents data from character input into x variable
+
+-------------------------------------------------------------
+identifier name rules:
+
+- can not be a keyword, keywords are reserved
+- only composed of letters, numbers, and underscore, no whitespace
+- must begin with letter or underscore, no numbers
+- c++ case sensitive, distinguish lower and upper case letters
+
+tips:
+- use camelcase
+- avoid beginning with underscore, usually reserved for os, library, or compiler use
+- make identifiers clear on what they are
+
+---------------------------------------------------------------------
+expressions:
+
+(2 *3;). this expression evaluates to 6, then discards the value 6
+
+(2*3);. this expression evaluates to 6, and keeps the value 6
+
+--------------------------------------------------------------------------
+functions:
+
+for main functions, use int main()
+
+for user defined functions use void nameOfFunc()
+
+when running a code, will start read from top, but start from main(), will not execute user defined functions if not called inside main()
+
+nested functions are not supported in cpp
+
+main function should return value 0, otherwise something is wrong
+
+void functions do not return a value to the caller, in this case, the main function
+
+-------------------------------------------------------------------------------
+for loops:
+
+for (statement1 ; statement2 ; statement3){
+
+statement1 is executed one time before execution of code block
+statement2 defines condition for executing code block
+statement3 executed everytime code block has been executed
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+

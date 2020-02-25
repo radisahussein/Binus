@@ -1,0 +1,71 @@
+Python Intro To Programming Notes
+
+- Maximum length of Identifier = 79 characters
+
+- Order of Precedence = P E D M A S
+
+- Core Data Type = Numbers , Strings, Lists, Dictionaries, Tuples, Files
+
+- for x % 0, always error
+
+- for 0 % x, always 0
+
+- if 3 / 2 = 1.5, 3 // 2 = 1
+
+- the operator "//" removes decimals, only whole value
+
+- intialize array = array[x,y,z]
+
+- initialize list = [x,y,z]
+
+- "True = False" , error, cant assign a value to variable True
+
+- variable of class can be changed by calling
+
+- id of same value variables are the same
+    ex = 
+    a = 2
+    b = 2
+    id(a) == id(b) #WILL RETURN True
+
+- id from calling class with same parameters, False
+
+- Eval will run an expression
+    ex = 
+    a = 2
+    print(eval(a * 2)) will return 4
+
+    ex 2 = 
+    a = "print(30)"
+    eval(a)
+
+    will return 30
+
+- getattr returns a value of an attribute of an object
+    ex: 
+    class Change:
+        def __init__(self,a,b):
+            self.z = a + b
+    
+    obj1 = Change(1,2)
+    print(getattr(obj1,z)) --> Will return value of z from obj1 = 3
+
+- setattr sets value of an attribute of an object
+    format = setattr(object,name of attribute,value)
+
+- Instantation = Creating an instance of a class
+
+- Child class to keep inheriance of parents init function:
+    parent.__init__(self)
+    or 
+    super().__init__()
+
+- Multiple Inheritance = A class can inherit attributes and methods from more than one parent class
+
+- Hierarchical Inheritance = When more than one child class are created from a single parent class
+
+- Single Level Inheritance = When a child class inherits from only one parent class
+
+- Multilevel Inheritance = Child and Grandchild class relationship
+
+

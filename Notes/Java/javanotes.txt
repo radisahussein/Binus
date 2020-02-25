@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------
+Important Lines of Codes! : 
+
+public class classname {
+
+public static void main(String[] args) {
+
+----------------------------------------------------------------------------------------
+
+Notes:
+
+- each java file only has 1 main class, name of the file and the name of the class has to be the same, with capitalization!!!
+
+- Java ignores whitespace, no indentation required, can run without indentation
+
+- // to comment single line and /* */ to comment multiple lines
+
+----------------------------------------------------------------------------------------
+DATA TYPE
+
+
+INT
+
+- the int data type allows values between -2,147,483,648 and 2,147,483,647
+
+- the int data type cannot hold decimals
+
+DOUBLE
+
+- the double data type allows values between 4.9 E-324 and 1.797 E+308
+
+CHAR
+
+- the char data type allows value of single characters
+
+BOOLEAN
+
+- the boolean data type allows values of true or false 
+
+--------------------------------------------------------------------------------------------
+
+TIPS
+
+- always declare variable data type before assigning a value
+
+-
