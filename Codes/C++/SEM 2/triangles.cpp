@@ -220,7 +220,7 @@ int main(){
 
 // ================================================================== //
 
-/* Radisa Hussein Rachmadi - 2301891752
+/* This code was made by Radisa Hussein Rachmadi - ID: 2301891752
 	Binus Computer Science 2023
 	Even Semester
 */
