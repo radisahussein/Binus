@@ -1,0 +1,5 @@
+name,class,age
+Radisa Hussein,Computer Science,17
+Rayhan Ali,Computer Science,18
+Glenn Feruta,BIS,17
+
