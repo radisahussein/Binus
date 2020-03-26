@@ -84,7 +84,7 @@ public class beeschool
         checkSubject:
         while (true)
         {
-            System.out.printf("Input subject name [3-25 characters | ends with 'Subject']: ");
+            System.out.print("Input subject name [3-25 characters | ends with 'Subject']: ");
             String inputSubjectName = sc.nextLine();
             int subjectIndex = inputSubjectName.indexOf(" Subject");
 
@@ -140,11 +140,11 @@ public class beeschool
 
         else
         {
-            System.out.println("Subject ID \t Subject Name \t Subject Category");
+            System.out.println("Subject ID" + "\t" + "Subject Name" + "\t\t" +  "Subject Category");
             System.out.println("========================================================");
             for (beesubject subject : this.subjects)
             {
-                System.out.println(subject.getSubjectID() + "\t" + subject.getSubjectName() + "\t" + subject.getSubjectCategory());
+                System.out.println(subject.getSubjectID() + "\t\t" + subject.getSubjectName() + "\t\t" + subject.getSubjectCategory());
             }
             System.out.println("========================================================");
         }
@@ -157,7 +157,7 @@ public class beeschool
         //User input new student
         while(true)
         {
-            System.out.println("Input student name [3-25 characters]: ");
+            System.out.print("Input student name [3-25 characters]: ");
             String inputName = sc.nextLine();
 
             if (inputName.length() >= 3 && inputName.length() <= 25)
@@ -198,12 +198,12 @@ public class beeschool
 
         else
         {
-            System.out.println("Student ID \t Student Name \t Student Gender");
+            System.out.println("Student ID\tStudent Name\tStudent Gender");
             System.out.println("========================================================");
             
             for (beestudent student : this.students)
             {
-                System.out.println(student.getStudentID() + "\t" + student.getStudentName() + "\t" + student.getStudentGender());
+                System.out.println(student.getStudentID() + "\t\t" + student.getStudentName() + "\t\t" + student.getStudentGender());
             }
             System.out.println("========================================================");
 
@@ -224,7 +224,7 @@ public class beeschool
             studentID:
             while(true)
             {
-                System.out.println("Input Student ID:");
+                System.out.print("Input Student ID:");
                 String checkStudentID = sc.nextLine();
 
                 //Check student id
@@ -242,7 +242,7 @@ public class beeschool
             beesubject subject = null;
             while(true)
             {
-                System.out.println("Input subject ID:");
+                System.out.print("Input subject ID:");
                 String checkSubjectID = sc.nextLine();
 
                 //check subject id
@@ -309,9 +309,9 @@ public class beeschool
     {
         for (beestudent student : this.students)
         {
-            System.out.println("Student ID \t Student Name \t Student Gender");
+            System.out.println("Student ID\tStudent Name\tStudent Gender");
             System.out.println("========================================================");
-            System.out.println(student.getStudentID() + "\t" + student.getStudentName() + "\t" + student.getStudentGender());
+            System.out.println(student.getStudentID() + "\t\t" + student.getStudentName() + "\t\t" + student.getStudentGender());
             System.out.println("\nScores: ");
             System.out.println("========================================================");
             if (student.getGradeList().size() == 0)
@@ -343,7 +343,7 @@ public class beeschool
 
                 for (int i = 0; i < 3-length; i++)
                 {
-                    num = "0" + num;
+                    num = "0" + num;    
                 }
             }
 
