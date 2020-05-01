@@ -1,0 +1,111 @@
+
+Question Set 1
+
+a) Genus is the parent class of Species. Genus as Super Class while Species as Subclass
+
+b) Specimen puts an instance of the Species as it's instance variable
+
+c) File Attached
+
+d) 1. It will be easier working around the Genus - Species Class as it extends, therefore can carry over attributes / methods from Genus
+   2. Cleaner code, less clutter.
+
+e) i. because the toString method in Species is overriding the same toString method in Genus
+   ii. override
+
+
+
+Question Set 2
+
+a) encapsulation is basically information hiding, such as using access modifiers to prevent easy access from outside the class
+
+b) 1. can better protect an object from unwanted access
+   2. allows access to a level without revealing other details below that level
+
+c) getCage()
+
+d) name
+
+e) file attached
+
+f) Advantage: Can inherit attributes and methods from species
+   Disadvantage: Will sometimes be unnecessary to inherit all the instance variables and methods from Species class, since different specimens have different properties
+
+Question Set 3
+
+a) Create a new private instance variable "markings" in the Species class. Also create setters and getter methods. Then update toString method to display the markings
+
+b) int countSpeciments (Specimen[] animals, Species s)
+   {
+      int count = 0;
+
+      for (Specimen animal : animals)
+      {
+         if(animal.equals(s))
+         {
+            num++
+         }
+      }
+
+      return num;
+   }
+
+c) function listSpecies(animals : Specimen[])
+      
+      
+
+Question Set 4
+
+a) ADT, Abstract Data Type, is a way to encapsulate. Allows programmers to hide details of an implementation to implement different versions that can behave differently.
+
+b) public LinkedList<Specimen> makeList(Specimen[] animals)
+   {
+      LinkedList<Specimen> list = new LinkedList<Specimen>();
+      
+      for (Specimen animal : animals)
+      {
+         list.add(animal);
+      }
+
+      return list;
+
+   }
+
+c) public LinkedList<Species> makeSpeciesList(LinkedList<Specimen> animals)
+   {
+      LinkedList<Species> list = new LinkedList<Species>();
+
+      for (Specimen animal : animals)
+      {
+         list.add(animal.getTOA());
+      }
+
+      return list;
+   }
+
+d) public LinkedList<Species> makeSpeciesListUnique(LinkedList allSpecies)
+   {
+      LinkedList<Species> list = new LinkedList<Species>();
+
+      for (Species animal : allSpecies)
+      {
+         boolean unique = true;
+         for (Species s : list)
+         {
+            if (s.equals(animal))
+            {
+               unique = false;
+               break;
+            }
+         }
+
+         if (unique)
+         {
+            list.add(animal);
+         }
+      }
+
+      return list;
+   }
+
+
