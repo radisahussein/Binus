@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DepositController">
+   <children>
+      <Label layoutX="254.0" layoutY="34.0" text="DEPOSIT">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="depositInput" layoutX="226.0" layoutY="169.0" />
+      <Label layoutX="161.0" layoutY="172.0" text="Amount: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="depositButton" layoutX="274.0" layoutY="259.0" mnemonicParsing="false" onAction="#depositEvent" text="Deposit" />
+      <Button layoutX="536.0" layoutY="14.0" mnemonicParsing="false" onAction="#toHomeEvent" prefWidth="50.0" text="Back" />
+      <Label fx:id="statusLabel" alignment="CENTER" layoutX="200.0" layoutY="217.0" prefHeight="17.0" prefWidth="200.0" textAlignment="CENTER" textFill="RED" />
+      <Label layoutX="161.0" layoutY="114.0" text="Balance:  Rp.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="balanceLabel" layoutX="239.0" layoutY="114.0" prefHeight="17.0" prefWidth="149.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

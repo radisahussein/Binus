@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignupDetailsController">
+   <children>
+      <Label layoutX="242.0" layoutY="123.0" text="Your Account Details :" />
+      <Label layoutX="245.0" layoutY="180.0" text="User ID  : " />
+      <Button layoutX="510.0" layoutY="14.0" mnemonicParsing="false" onAction="#toLoginEvent" prefHeight="25.0" prefWidth="75.0" text="Login" />
+      <Label layoutX="247.0" layoutY="219.0" text="Balance :" />
+      <Label fx:id="IDdetails" layoutX="300.0" layoutY="180.0" prefHeight="17.0" prefWidth="87.0" text="blank" />
+      <Label fx:id="BalanceDetails" layoutX="300.0" layoutY="219.0" prefHeight="17.0" prefWidth="87.0" text="blank" />
+   </children>
+</AnchorPane>

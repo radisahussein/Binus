@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TransHistoryController">
+   <children>
+      <Label layoutX="170.0" layoutY="39.0" text="TRANSACTION HISTORY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="536.0" layoutY="14.0" mnemonicParsing="false" onAction="#toHomeEvent" prefWidth="50.0" text="Back" />
+      <TableView fx:id="tableView" layoutX="20.0" layoutY="86.0" prefHeight="300.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="TransCol" prefWidth="115.0" text="Trannsaction ID" />
+          <TableColumn fx:id="TypeCol" prefWidth="100.0" text="Type" />
+            <TableColumn fx:id="ReceiverCol" prefWidth="115.0" text="Receiver" />
+           <TableColumn fx:id="SenderCol" prefWidth="115.0" text="Sender" />
+           <TableColumn fx:id="AmountCol" prefWidth="115.0" text="Amount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

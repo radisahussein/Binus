@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignupController">
+   <children>
+      <TextField fx:id="firstName" layoutX="226.0" layoutY="62.0" promptText="First Name" />
+      <TextField fx:id="lastName" layoutX="226.0" layoutY="112.0" promptText="Last Name" />
+      <TextField fx:id="email" layoutX="226.0" layoutY="212.0" promptText="Email" />
+      <RadioButton fx:id="male" layoutX="226.0" layoutY="162.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="female" layoutX="315.0" layoutY="162.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <Button fx:id="signupButton" layoutX="250.0" layoutY="312.0" mnemonicParsing="false" onAction="#toSignupDetailsEvent" prefHeight="25.0" prefWidth="100.0" text="Sign Up" />
+      <Button layoutX="515.0" layoutY="14.0" mnemonicParsing="false" onAction="#toLoginEvent" prefHeight="25.0" prefWidth="75.0" text="Login" />
+      <PasswordField fx:id="password" layoutX="226.0" layoutY="262.0" promptText="Password" />
+   </children>
+</AnchorPane>
