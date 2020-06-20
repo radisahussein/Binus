@@ -38,7 +38,7 @@ public class SignupController {
     public ConnectionClass connectionClass;
     public PreparedStatement pst;
 
-    private String userID = "";
+    private String userID;
     private static SignupController instance;
 
 
@@ -67,7 +67,11 @@ public class SignupController {
     @FXML
     public void toLoginEvent(ActionEvent event) throws IOException
     {
-        SignupController.getInstance().toLoginEvent(event);
+        Parent signupDetailsRoot = FXMLLoader.load(getClass().getResource("/resources/main.fxml"));
+        Scene signupDetailsScene = new Scene(signupDetailsRoot,600,400);
+        Stage signupDetailsStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        signupDetailsStage.setScene(signupDetailsScene);
+        signupDetailsStage.show();
     }
 
     //signup function
@@ -95,12 +99,6 @@ public class SignupController {
         connection = connectionClass.getConnection();
         try{
             pst = connection.prepareStatement(insert);
-        } catch(SQLException e)
-        {
-            e.printStackTrace();
-        }
-
-        try {
             pst.setString(1,getUserID());
             pst.setString(2,pswd);
             pst.setString(3,firstname);
@@ -119,12 +117,10 @@ public class SignupController {
             signupDetailsStage.setScene(signupDetailsScene);
             signupDetailsStage.show();
 
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch(SQLException e)
+        {
+            e.printStackTrace();
         }
-
-
     }
 
     //get gender from radio button

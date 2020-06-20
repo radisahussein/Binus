@@ -79,19 +79,24 @@ public class HomeController implements Initializable {
     }
 
     //get balance of userid
-    public int getBalance(String id) throws SQLException {
+    public int getBalance(String id){
 
         int curBal = 0;
         ResultSet resultSet;
 
         //get balance
         String query = "SELECT * from userauth WHERE userid=?";
-        pst = connection.prepareStatement(query);
-        pst.setString(1,id);
-        resultSet = pst.executeQuery();
-        while(resultSet.next())
-        {
-            curBal = resultSet.getInt("Balance");
+        try {
+            pst = connection.prepareStatement(query);
+            pst.setString(1,id);
+            resultSet = pst.executeQuery();
+            while(resultSet.next())
+            {
+                curBal = resultSet.getInt("Balance");
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
 
         return curBal;

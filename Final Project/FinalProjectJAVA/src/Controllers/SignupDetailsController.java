@@ -17,6 +17,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -27,10 +28,30 @@ public class SignupDetailsController implements Initializable {
     @FXML
     private Label BalanceDetails;
 
+    private String userID;
+
     public Connection connection;
     public ConnectionClass connectionClass;
-    public PreparedStatement pst;
 
+   public void setUserID(String id)
+   {
+       userID = id;
+   }
+
+   public String getUserID()
+   {
+       return userID;
+   }
+
+    public void setBalanceDetails(String bal)
+    {
+        BalanceDetails.setText(bal);
+    }
+
+    public void setIDdetails(String id)
+    {
+        IDdetails.setText(id);
+    }
 
     //init function to load balance
     @Override
@@ -39,18 +60,33 @@ public class SignupDetailsController implements Initializable {
         connectionClass = new ConnectionClass();
         connection = connectionClass.getConnection();
 
-        IDdetails.setText(SignupController.getInstance().getUserID());
+        setUserID(SignupController.getInstance().getUserID());
+
+        setIDdetails(getUserID());
 
         //get and display balance
-        int curBal = 0;
+        int curBal;
 
+        PreparedStatement pst;
+        ResultSet resultSet;
+
+        //get balance
+        String query = "SELECT * from userauth WHERE userid=?";
         try {
-            curBal = HomeController.getInstance().getBalance(SignupController.getInstance().getUserID());
-            BalanceDetails.setText(Integer.toString(curBal));
+            pst = connection.prepareStatement(query);
+            pst.setString(1,getUserID());
+            resultSet = pst.executeQuery();
+            while(resultSet.next())
+            {
+                curBal = resultSet.getInt("Balance");
+                setBalanceDetails(Integer.toString(curBal));
+            }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+
 
     }
 

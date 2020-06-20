@@ -34,14 +34,10 @@ public class DepositController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         //get balance and display label
-        try {
-            int curBal = HomeController.getInstance().getBalance(LoginController.getInstance().getUserID());
-            setBalanceLabel(Integer.toString(curBal));
+        int curBal = HomeController.getInstance().getBalance(LoginController.getInstance().getUserID());
+        setBalanceLabel(Integer.toString(curBal));
 
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
 
     }
 

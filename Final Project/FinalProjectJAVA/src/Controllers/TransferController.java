@@ -71,14 +71,11 @@ public class TransferController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         //get balance and display label
-        int curBal = 0;
-        try {
-            curBal = HomeController.getInstance().getBalance(LoginController.getInstance().getUserID());
-            setBalanceLabel(Integer.toString(curBal));
+        int curBal;
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        curBal = HomeController.getInstance().getBalance(LoginController.getInstance().getUserID());
+        setBalanceLabel(Integer.toString(curBal));
+
 
     }
 
